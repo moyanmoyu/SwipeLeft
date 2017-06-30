@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>touchMove</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body{
+        margin: 0;
+      }
+      ul,li{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      li{
+        display: block;
+        line-height: 50px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+        font-size: 20px;
+        height: 50px;
+        position: relative;
+      }
+      .swipe-item{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        background-color: #fff;
+      }
+      .delete{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100px;
+        height: 100%;
+        background-color: #f00;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <ul class="boxNode">
+        <li class="swipe-li">
+          <div class="swipe-item">1</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">2</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">3</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">4</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">5</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">6</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">7</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">8</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">9</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">10</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">11</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">12</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">13</div>
+          <div class="delete">删除</div>
+        </li>
+        <li class="swipe-li">
+          <div class="swipe-item">14</div>
+          <div class="delete">删除</div>
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery-SwipeLeft.js"></script>
+    <!--<script src="SwipeLeft.js"></script>-->
+    <script>
+      new jQuery.fn.SwipeLeft({
+        degelateEl: '.boxNode',
+        swipeLi: '.swipe-li',
+        swipeEl: '.swipe-item',
+        hideEl: '.delete'
+      })
+      // new SwipeLeft({
+      //   degelateEl: '.boxNode',
+      //   swipeLi: '.swipe-li',
+      //   swipeEl: '.swipe-item',
+      //   hideEl: '.delete'
+      // })
+    </script>
+  </body>
+</html>
